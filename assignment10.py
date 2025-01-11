@@ -28,7 +28,9 @@ def removePlayer(playerName):
 
 def leaderboard():
     leaders = sorted(gamingLobby.items(), key=lambda x: x[1], reverse=True)
-    print(leaders)
+    print("--- Leaderboard ---")
+    for player, level in leaders:
+        print(f"{player} - Level {level}")
 
 while True:
     print("\n1. Modify a player's level.")
