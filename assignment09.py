@@ -37,8 +37,8 @@ while True:
   # If the name is not in the dictionary, print 'Name not found'
   if choice == "1":
     name = input("Please enter a name (STOP to quit): ")
-    if name in phonebook:
-      print(f"{name}'s phone number is: {phonebook[name]}.")
+    if name in sortedPhonebook:
+      print(f"{name}'s phone number is: {sortedPhonebook[name]}.")
     else:
       print("Name not found.")
 
@@ -48,13 +48,15 @@ while True:
   # Replace the old phone number with the new one
   if choice == "2":
     name = input("Please enter a name: ")
-    if name in phonebook:
+    if name in sortedPhonebook:
       phone = input("Please enter the number (STOP to quit): ")
-      phonebook[name] = phone
+      sortedPhonebook[name] = phone
     else:
       print("Name not found.")
 
   # If choice is 3, print the entire dictionary
+  if choice == "3":
+    print(sortedPhonebook)
 
   # If choice is 4, break out of the loop
 
