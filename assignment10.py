@@ -79,7 +79,7 @@ while True:
 
     # If choice is 2, ask for the player name and the player level
     # Then call the addPlayer function
-    if choice == "2":
+    elif choice == "2":
         name = input("Please enter the player's name: ")
         level = input(f"Please enter {name}'s level: ")
         addPlayer(name, level)
@@ -87,18 +87,19 @@ while True:
 
     # If choice is 3, ask for the player name
     # Then call the removePlayer function
-    if choice == "3":
+    elif choice == "3":
         name = input("Please enter the player's name: ")
         removePlayer(name)
 
     # If choice is 4, call the leaderboard function
-    if choice == "4":
+    elif choice == "4":
         leaderboard()
 
     # If choice is 5, break from the while True loop
-    if choice == "5":
+    elif choice == "5":
         break
 
     # Otherwise, the user choice was invalid. Simply state choice was invalid
-
+    else:
+        print("Invalid entry.")
 
