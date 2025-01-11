@@ -59,6 +59,8 @@ while True:
     print(sortedPhonebook)
 
   # If choice is 4, break out of the loop
+  if choice == "4":
+    break
 
   # Repeat or Quit
   repeat = input(
