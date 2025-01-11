@@ -1,20 +1,26 @@
 print("Welcome to the Phonebook!\n")
 
 # Initialize your phonebook dictionary
+phonebook = {}
 
 # User Input Loop
 while True:
-  # Ask the user to enter a name (or 'STOP' to end - in which case break       out of the loop)
+  # Ask the user to enter a name (or 'STOP' to end - in which case break out of the loop)
+  name = input("Please enter a name (STOP to quit): ")
+  if name.upper() == "STOP":
+    break
 
-  break
+  # Ask the user to enter a phone number (or 'STOP' to end - in which case break out of the loop)
+  phone = input("Please enter a name (STOP to quit): ")
+  if phone.upper() == "STOP":
+    break
 
-# Ask the user to enter a phone number (or 'STOP' to end - in which case     break out of the loop)
-
-# Append the new key-value pair (name & number) to the dictionary
+  # Append the new key-value pair (name & number) to the dictionary
+  phonebook[name] = phone
 
 # Outisde the first loop
 # Sort the dictionary - Replace 'dictionaryName' with what your phonebook dictionary is named
-sortedPhonebook = dict(sorted(dictionaryName.items()))
+sortedPhonebook = dict(sorted(phonebook.items()))
 
 # User Options Loop
 while True:
