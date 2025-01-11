@@ -7,18 +7,18 @@ gamingLobby = {}
 # Remember, only positive level changes (>0) because nobody goes down a level
 def modifyLevel(playerName, levelChange):
     print(f"Processing modifylevel for {playerName} and level {levelChange}.")
-
     # Check if the player is in the gaming lobby first of all
-
-
-    # Then check if the level change is positive
-
-
-    # If both of these conditions are true, then you can change the level
-
-
+    if playerName in gamingLobby:
+        # Then check if the level change is positive
+        if level > 0:
+            # If both of these conditions are true, then you can change the level
+            gamingLobby[playerName] += levelChange
+        # Or a message stating that 'level change must be positive'
+        else:
+            print("The level change must be positive.")
     # Otherwise, print that either the player isn't in the lobby
-    # Or a message stating that 'level change must be positive'
+    else:
+        print(f"{playerName} is not in the lobby.")
 
 # Make this function add a player to the gaming lobby
 def addPlayer(playerName, playerLevel):
