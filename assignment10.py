@@ -26,14 +26,17 @@ def addPlayer(playerName, playerLevel):
 
     # Check if the player is already in the lobby
     # If they are, don't add the player
-
-
-    # Then check if the playerLevel is above 0 (>0)
-    # Player levels can't be negative (it just doesn't make sense)
-
-
-    # If the player isn't in the lobby, and the level is valid,
-    # add the player to the dictionary with along with their starting level
+    if playerName in gamingLobby:
+        print(f"{playerName} is already in the lobby.")
+    else:
+        # Then check if the playerLevel is above 0 (>0)
+        # If the player isn't in the lobby, and the level is valid,
+        # add the player to the dictionary with along with their starting level
+        if playerLevel > 0:
+            gamingLobby[playerName] = playerLevel
+        else:
+            # Player levels can't be negative (it just doesn't make sense)
+            print("The player's level must be positive.")
 
 # Make this function remove a player to the gaming lobby
 def removePlayer(playerName):
@@ -74,14 +77,14 @@ while True:
     # Then call the modifyLevel function
     if choice == "1":
         name = input("Please enter the player's name: ")
-        level = input(f"Please enter {name}'s level: ")
+        level = int(input(f"Please enter {name}'s level change: "))
         modifyLevel(name, level)
 
     # If choice is 2, ask for the player name and the player level
     # Then call the addPlayer function
     elif choice == "2":
         name = input("Please enter the player's name: ")
-        level = input(f"Please enter {name}'s level: ")
+        level = int(input(f"Please enter {name}'s level: "))
         addPlayer(name, level)
 
 
