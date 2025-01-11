@@ -43,7 +43,6 @@ while True:
     print("5. Stop.")
 
     choice = input("Enter your choice (1/2/3/4/5): ")
-
     if choice == "1":
         name = input("Please enter the player's name: ")
         level = int(input(f"Please enter {name}'s level change: "))
