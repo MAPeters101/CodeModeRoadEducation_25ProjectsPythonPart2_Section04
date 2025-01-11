@@ -58,8 +58,9 @@ def leaderboard():
 
     # To print the leaderboard, you will need to do extra research
     # On how to sort a dictionary based on the values
-    # Or you can prove me wrong and come up with a solution with what we've       learned
-
+    # Or you can prove me wrong and come up with a solution with what we've learned
+    leaders = sorted(gamingLobby.items(), key=lambda x: x[1], reverse=True)
+    print(leaders)
 
 # Main code
 while True:
