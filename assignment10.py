@@ -6,7 +6,7 @@ gamingLobby = {}
 # Make this function modify the current level that a player is
 # Remember, only positive level changes (>0) because nobody goes down a level
 def modifyLevel(playerName, levelChange):
-    pass
+    print(f"Processing {playerName} and level {levelChange}.")
 
     # Check if the player is in the gaming lobby first of all
 
@@ -72,6 +72,10 @@ while True:
 
     # If choice is 1, ask for the player name and the level change
     # Then call the modifyLevel function
+    if choice == "1":
+        name = input("Please enter the player's name: ")
+        level = input(f"Please enter {name}'s level: ")
+        modifyLevel(name, level)
 
     # If choice is 2, ask for the player name and the player level
     # Then call the addPlayer function
