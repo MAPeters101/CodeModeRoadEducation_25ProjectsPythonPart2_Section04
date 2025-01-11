@@ -43,12 +43,12 @@ def removePlayer(playerName):
     print(f"Processing removePlayer for {playerName}.")
 
     # Check if the player is in the lobby
-
-
     # If so, remove the player from the lobby
-
-
+    if playerName in gamingLobby:
+        del gamingLobby[playerName]
     # Otherwise, print that the player isn't in the lobby
+    else:
+        print(f"{playerName} isn't in the lobby.")
 
 # THIS IS AN OPTIONAL FUNCTION (YOU DO NOT NEED TO INCLUDE IT)
 # If you don't include this function, comment out the header
