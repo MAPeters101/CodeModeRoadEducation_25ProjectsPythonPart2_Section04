@@ -3,7 +3,6 @@ print("Welcome to the Gaming Lobby\n")
 gamingLobby = {}
 
 def modifyLevel(playerName, levelChange):
-    print(f"Processing modifylevel for {playerName} and level {levelChange}.")
     if playerName in gamingLobby:
         if level > 0:
             gamingLobby[playerName] += levelChange
@@ -13,8 +12,6 @@ def modifyLevel(playerName, levelChange):
         print(f"{playerName} is not in the lobby.")
 
 def addPlayer(playerName, playerLevel):
-    print(f"Processing addPlayer for {playerName} and level {playerLevel}.")
-
     if playerName in gamingLobby:
         print(f"{playerName} is already in the lobby.")
     else:
@@ -24,14 +21,12 @@ def addPlayer(playerName, playerLevel):
             print("The player's level must be positive.")
 
 def removePlayer(playerName):
-    print(f"Processing removePlayer for {playerName}.")
     if playerName in gamingLobby:
         del gamingLobby[playerName]
     else:
         print(f"{playerName} isn't in the lobby.")
 
 def leaderboard():
-    print(f"Processing leaderboard.")
     leaders = sorted(gamingLobby.items(), key=lambda x: x[1], reverse=True)
     print(leaders)
 
