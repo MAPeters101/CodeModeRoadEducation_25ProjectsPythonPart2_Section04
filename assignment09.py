@@ -11,7 +11,7 @@ while True:
     break
 
   # Ask the user to enter a phone number (or 'STOP' to end - in which case break out of the loop)
-  phone = input("Please enter a name (STOP to quit): ")
+  phone = input("Please enter the number (STOP to quit): ")
   if phone.upper() == "STOP":
     break
 
@@ -35,6 +35,12 @@ while True:
   # If choice is 1, ask the user to enter a name
   # If the name is in the dictionary, print the phone number
   # If the name is not in the dictionary, print 'Name not found'
+  if choice == "1":
+    name = input("Please enter a name (STOP to quit): ")
+    if name in phonebook:
+      print(f"{name}'s phone number is: {phonebook[name]}.")
+    else:
+      print("Name not found.")
 
   # If choice is 2, ask the user to enter a name
   # If the name is in the dictionary, ask the user to enter a new phone         number
