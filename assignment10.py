@@ -96,6 +96,8 @@ while True:
         leaderboard()
 
     # If choice is 5, break from the while True loop
+    if choice == "5":
+        break
 
     # Otherwise, the user choice was invalid. Simply state choice was invalid
 
