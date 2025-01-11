@@ -43,9 +43,16 @@ while True:
       print("Name not found.")
 
   # If choice is 2, ask the user to enter a name
-  # If the name is in the dictionary, ask the user to enter a new phone         number
+  # If the name is in the dictionary, ask the user to enter a new phone number
   # If the name is not in the dictionary, print 'Name not found'
   # Replace the old phone number with the new one
+  if choice == "2":
+    name = input("Please enter a name: ")
+    if name in phonebook:
+      phone = input("Please enter the number (STOP to quit): ")
+      phonebook[name] = phone
+    else:
+      print("Name not found.")
 
   # If choice is 3, print the entire dictionary
 
