@@ -51,7 +51,7 @@ def removePlayer(playerName):
 # If you don't include this function, comment out the header
 # Also, remove the section of code in the main code that mentions 'leaderboard'
 def leaderboard():
-    pass
+    print(f"Processing leaderboard.")
 
     # To print the leaderboard, you will need to do extra research
     # On how to sort a dictionary based on the values
@@ -92,6 +92,8 @@ while True:
         removePlayer(name)
 
     # If choice is 4, call the leaderboard function
+    if choice == "4":
+        leaderboard()
 
     # If choice is 5, break from the while True loop
 
